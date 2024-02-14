@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps/css/registration.css" %}">
+{% endblock %}
 {% block header %}
-        <nav>
+ <nav>
             <div class="logo"><a href="index.html">FreshStyle</a></div>
           <ul class="nav-links">
             <li class="dropdown">
@@ -17,7 +19,17 @@
           </ul>
         </nav>
 {% endblock %}
-
 {% block main %}
-<div class="centered-text"><b>Fresh Style Shop</b></div>
+        <form>
+          <h2>Вход</h2>
+          <p>Еще нет аккаунта? <a href="registration.html">Создайте</a></p>
+          <div>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div>
+            <input type="password" id="password" name="password" placeholder="Пароль" required>
+          </div>
+          <br>
+          <input type="submit" value="Войти">
+        </form>
 {% endblock %}

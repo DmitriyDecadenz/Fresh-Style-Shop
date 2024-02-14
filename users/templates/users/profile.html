@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps/css/basket.css" %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Balega&display=swap">
+{% endblock %}
+
+{% block js %}
+
+    <script src="/js/index.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
+
+{% endblock %}
+
+
+{% block header %}
+        <nav>
+            <div class="logo"><a href="/index.html">FreshStyle</a></div>
+          <ul class="nav-links">
+            <li class="dropdown">
+              <a>Аккаунт</a>
+              <div class="dropdown-content">
+                <a href="#">Корзина</a>
+                <a href="#">Настройки</a>
+                <a href="#">Выйти</a>
+              </div>
+            </li>
+            <li><a href="/goods.html">Товары</a></li>
+          </ul>
+        </nav>
+{% endblock %}

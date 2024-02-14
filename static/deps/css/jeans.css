@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Изменяем цвет фона на белый */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+  }
+  header {
+    background-color: transparent; /* Прозрачный фон */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%; /* Изменяем отступы для различных размеров экрана */
+  }
+  footer {
+    font-size: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent; /* Прозрачный фон */
+    color: white; /* Белый цвет текста */
+    padding: 10px; /* Отступы внутри footer */
+    text-align: center; /* Выравнивание текста по центру */
+}
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255); /* цвет текста */
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .logo:hover {
+    opacity: 0.7; /* Добавляем эффект при наведении */
+  }
+  .logo a {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: rgb(255, 255, 255); /* цвет текста */
+  }
+  .logo a:hover {
+    opacity: 0.7; /* Добавляем эффект при наведении */
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-x: auto; /* Включаем горизонтальный скроллинг */
+    margin-top: 130px;
+    font-size: 0; /* Используется для устранения пробелов между элементами */
+  }
+
+  .item {
+    flex: 0 0 auto;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    border-radius: 10px; /* Добавляем закругление углов блоков */
+    background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый фон */
+    overflow: hidden; /* Обрезаем изображения, чтобы они не выходили за пределы блока */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  }
+  .item p {
+    margin-top: 10px;
+  }
+  .item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+    border-radius: 10px; /* Добавляем скругление углов изображения */
+  }
+  .button1 {
+    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255); /* Цвет кнопки */
+    color: rgb(0, 0, 0); /* Цвет текста кнопки */
+    border: none;
+    border-radius: 90px; /* Добавляем закругление кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .button:hover {
+    background-color: #45a049; /* Изменение цвета при наведении */
+  }
+  .item img:hover {
+    transform: scale(1.1); /* Увеличиваем размер при наведении */
+  }
+  .button {
+    margin-top: 10px;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  .nav-links li {
+    margin: 0 0.5rem; /* Изменяем отступы для различных размеров экрана */
+  }
+  .nav-links a {
+    color: rgb(255, 255, 255); /* цвет текста */
+    text-decoration: none;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent; /* Прозрачный черный фон подменю */
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: #fff; /* Устанавливаем белый цвет текста подменю */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown .dropdown-content a {
+    color: rgb(255, 255, 255); /* Устанавливаем белый цвет текста */
+    text-decoration: none;
+    padding: 0.7rem 0.5rem; /* Добавим отступы вокруг текста */
+    display: block; /* Отображаем текст блоками, чтобы он занимал всю ширину */
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    top: 100%;
+  }
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+    color: black;
+  }
+  /* Медиа-запросы для адаптивного дизайна */
+  @media screen and (max-width: 768px) {
+    nav {
+      padding: 1rem 2%; /* Изменяем отступы для маленьких экранов */
+    }
+    .nav-links li {
+      margin: 0 0.3rem; /* Изменяем отступы для маленьких экранов */
+    }
+  }
+  .centered-text {
+    font-family: 'Balega', sans-serif;
+    margin-top: 130px;
+    text-align: center; /* Центрируем текст */
+    font-size: 60px; /* Размер шрифта 60 пикселей */
+    color: white; /* Белый цвет текста */
+  }
+  .centered-text-everyday {
+    font-family: 'Balega', sans-serif;
+    margin-top: 25px;
+    text-align: center; /* Центрируем текст */
+    font-size: 20px; /* Размер шрифта 40 пикселей */
+    color: white; /* Белый цвет текста */
+  }
+  @media (max-width: 768px) {
+    .centered-text {
+      font-size: 24px; /* Изменяем размер шрифта для мобильных устройств */
+      top: 80px; /* Изменяем отступ от верха для мобильных устройств */
+    }
+  }
+  @media (max-width: 768px) {
+    .centered-text-everyday {
+      font-size: 18px; /* Изменяем размер шрифта для мобильных устройств */
+      top: 15px; /* Изменяем отступ от верха для мобильных устройств */
+    }
+  }
+  @media screen and (max-width: 768px) {
+    footer {
+        font-size: 12px; /* изменение размера текста для мобильных устройств */
+    }
+}

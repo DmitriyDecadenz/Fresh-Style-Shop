@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+ <link rel="stylesheet" href="{% static "deps/css/jean.css"%}">
+{% endblock %}
+
 {% block header %}
         <nav>
             <div class="logo"><a href="index.html">FreshStyle</a></div>
@@ -16,8 +20,8 @@
             <li><a href="index.html">Главная</a></li>
           </ul>
         </nav>
-{% endblock %}
+{% end block %}
 
 {% block main %}
-<div class="centered-text"><b>Fresh Style Shop</b></div>
+<div class="centered-text"><b>Джинсы</b></div>
 {% endblock %}

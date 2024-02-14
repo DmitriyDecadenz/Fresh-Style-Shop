@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static "deps/css/registration.css"%}">
+{% endblock %}
+
+
+
+{% block header %}
+        <nav>
+            <div class="logo"><a href="index.html">FreshStyle</a></div>
+          <ul class="nav-links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Товары</a></li>
+          </ul>
+        </nav>
+{% endblock %}
+
+{% block main %}
+        <form>
+            <h2>Регистрация</h2>
+            <p>Уже есть аккаунт? <a href="login.html">Войдите</a></p>
+            <div>
+                <input type="name" id="name" name="name" placeholder="Имя" required>
+              </div>
+            <div>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div>
+              <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+            </div>
+            <div>
+              <input type="password" id="password" name="password" placeholder="Пароль" required>
+            </div>
+            <br>
+            <input type="submit" value="Зарегистрироваться">
+          </form>
+{% endblock %}

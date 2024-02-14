@@ -1,0 +1,42 @@
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top: 140px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.384);
+    padding-top: 20px;
+    border-top-right-radius: 30px; /* Скругляем правый верхний угол */
+  }
+  
+  .dropdown-btn, .dropdown-container button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 5px; /* Уменьшаем отступ между кнопками */
+  }
+  
+  .dropdown-container {
+    display: none;
+  }
+  
+  .content {
+    margin-left: 200px;
+  }
+  
+  .dropdown-btn:hover, .dropdown-container button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  @media (max-width: 768px) {
+    .sidenav {
+      font-size: 18px; /* Изменяем размер шрифта для мобильных устройств */
+      top: 15px; /* Изменяем отступ от верха для мобильных устройств */
+    }
+  }
