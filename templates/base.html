@@ -46,9 +46,27 @@ body {
 <body>
     <header>
         {% block header %}
-
+        <nav>
+            <div class="logo"><a href="{% url 'main:index' %}">FreshStyle</a></div>
+          <ul class="nav-links">
+            <li class="dropdown">
+              <a>Аккаунт</a>
+              <div class="dropdown-content">
+                <a href="{% url 'users:login' %}">Войти</a>
+                <a href="{% url 'users:registration' %}">Регистрация</a>
+              </div>
+            </li>
+            <li><a href="{% url 'goods:main_goods' %}">Товары</a></li>
+            <li><a href="{% url 'main:index' %}">Главная</a></li>
+          </ul>
+        </nav>
         {% endblock %}
       </header>
+    <div class="sidenav">
+        {% block sidenav%}
+
+        {% endblock %}
+    </div>
     <main>
         {% block main %}
 

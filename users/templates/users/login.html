@@ -3,26 +3,11 @@
 {% block css %}
     <link rel="stylesheet" href="{% static "deps/css/registration.css" %}">
 {% endblock %}
-{% block header %}
- <nav>
-            <div class="logo"><a href="index.html">FreshStyle</a></div>
-          <ul class="nav-links">
-            <li class="dropdown">
-              <a>Аккаунт</a>
-              <div class="dropdown-content">
-                <a href="login.html">Войти</a>
-                <a href="registration.html">Регистрация</a>
-              </div>
-            </li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="index.html">Главная</a></li>
-          </ul>
-        </nav>
-{% endblock %}
+
 {% block main %}
         <form>
           <h2>Вход</h2>
-          <p>Еще нет аккаунта? <a href="registration.html">Создайте</a></p>
+          <p>Еще нет аккаунта? <a href="{% url 'users:registration' %}">Создайте</a></p>
           <div>
             <input type="email" id="email" name="email" placeholder="Email" required>
           </div>
