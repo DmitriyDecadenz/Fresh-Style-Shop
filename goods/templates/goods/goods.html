@@ -7,42 +7,20 @@
 {% endblock %}
 
 {% block js %}
-    <script src="/js/navigations.js" defer></script>
-    <script src="/js/goods.js" defer></script>
+    <script src="{% static "deps/js/navigations.js"%}" defer></script>
+    <script src="{% static "deps/js/goods.js"%}" defer></script>
 {% endblock %}
 
 {% block sidenav %}
-        <div class="sidenav">
-          <button class="dropdown-btn"><b>&equiv; Футболки</b></button>
-          <div class="dropdown-container">
-            <button>Adidas</button>
-            <button>Nike</button>
-            <button>Stussy</button>
-            <button>INFLATION</button>
-            <button>AW SPIKY HEAD</button>
-            <button>VANCARHELL</button>
-            <button>Onese7en</button>
-          </div>
-          <button class="dropdown-btn"><b>&equiv; Худи</b></button>
-          <div class="dropdown-container">
-            <button>ACUS</button>
-            <button>Befearless</button>
-            <button>Carhartt</button>
-            <button>GAP</button>
-            <button>Vetements</button>
-            <button>SkatePark</button>
-            <button>Ken Vibe</button>
-          </div>
-          <button class="dropdown-btn"><b>&equiv; Лонгсливы</b></button>
-          <div class="dropdown-container">
-            <button>Carhartt</button>
-            <button>Stussy</button>
-            <button>C.P. Company</button>
-            <button>TKPA</button>
-            <button>Project</button>
-            <button>Adidas</button>
-            <button>Nike</button>
-            <button>VAMTAC</button>
-          </div>
+	{% for category in categories %}
+				<button class="dropdown-btn"><b>&equiv; {{category.name}}</b></button>
+				<div class="dropdown-container">
+						{% for product in products %}
+								{% if product.category == category %}
+									<button><b>{{product.name}}</b></button>
+								{% endif %}
+						{% endfor %}
         </div>
+	{% endfor %}
+
  {% endblock %}
